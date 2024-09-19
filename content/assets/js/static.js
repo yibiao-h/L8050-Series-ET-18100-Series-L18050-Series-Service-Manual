@@ -1,0 +1,17 @@
+var CONST_TEXT = {
+  openall: 'Expand all'
+ ,closeall: 'Close all'
+ ,back: 'Back'
+ ,gototop: 'Go to top'
+ ,search: 'Search'
+ ,inputsearchword: 'Enter a search keyword'
+ ,searchresult: 'Search Results'
+ ,searchnopage: 'No page containing the keyword. '
+ ,inputsearchword: 'Enter a search keyword'
+ ,inputminsearchword: 'Input Search Word with more than %d characters'
+ ,toomanykeywords: 'Too many keywords are used. \nSearch with {0} or less keywords.'
+ ,toomanyresults: 'More than {0} results are found. \n{0} most relevent results are displayed.\nEnter additional keywords or search with a different keyword to narrow down your search.'
+ ,numberofdisplayedresults: 'The number of results displayed per page:'
+ ,numberofresults: 'Found:'
+ ,cases: 'cases'
+}

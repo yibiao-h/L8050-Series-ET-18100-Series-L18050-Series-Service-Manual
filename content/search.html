@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>検索</title>
+    <meta name="description" content="description">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/pc.css">
+    <link rel="stylesheet" href="assets/css/ipad-landscape.css">
+    <link rel="stylesheet" href="assets/css/ipad-portrait.css">
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="assets/js/default.js"></script>
+    <script type="text/javascript" src="assets/js/static.js"></script>
+    <script type="text/javascript" src="assets/js/search-function.js"></script>
+    <script type="text/javascript" src="assets/js/search-space-data.js"></script>
+    <script type="text/javascript" src="assets/js/search-page-data.js"></script>
+    <script type="text/javascript" src="assets/js/search.js"></script>
+</head>
+
+<body>
+
+    <div id="app" data-server-rendered="true" class="page-search">
+        <!-- navbar -->
+        <header class="navbar">
+            <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewbox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627
+							5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0
+							160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12
+							5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627
+							0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12
+							12v32c0 6.627-5.373 12-12 12z"></path></svg></div>
+			            <a href="index.html" class="home-link router-link-active">
+			                <!----><span class="site-logo">
+						<img src="assets/img/head_logo.png" alt="Epson Logo">
+					</span>
+            </a>
+            <div class="links">
+                <nav class="nav-links can-hide">
+                    <div class="nav-item"><span class="header_title">L8050 Series/ET-18100 Series/L18050 Series Service Manual</span></div>
+                    <div class="nav-item">
+                        <a href="#" class="header_printer">
+                            <img src="assets/img/printer.png" alt="Printer Logo">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- search -->
+        <div class="search-panel">
+            <form method="get" class="aui" id="searchForm">
+                <h1 id="$titleHelper.getPageTitle($page)">
+                    <a href="#$titleHelper.getPageTitle($page)" aria-hidden="true" class="header-anchor">#</a>
+                    検索
+                </h1>
+                <div class="aui-group">
+                    <input type="text" class="text middle-field" id="k" name="k">
+                    <input type="hidden" id="page" name="page">
+                    <input type="hidden" id="backto" name="backto">
+                    <input type="submit" value="Search" onclick="document.getElementById('page').value='1'" class="aui-button">
+                    <a class="aui-button" href="javascript:comback();">Back</a>
+                </div>
+            </form>
+        </div>
+        <!-- page -->
+        <div class="page">
+            <div class="content">
+            <div class="moduleh1">
+                <h1>
+                    <span>Search Results</span>
+                    <span class="ftitle" id="searchResultText">Found:</span>
+                    <span class="fcount" id="pageCount"></span>
+                </h1>
+                <div class="seperatorLine"></div>
+                <div class="message" id="errorMessage" style="display: none">
+                </div>
+                <div class="banner" id="relatedAndSynonym" style="display: none">
+                </div>
+                <div class="numberOfPageDiv">
+                    <span>The number of results displayed per page:<span><select class="select" name="numberOfPage" id="numberOfPage" onchange="changeNumberRowInPage()">
+                      <option value="5">5</option>
+                      <option value="10" selected>10</option>
+                      <option value="20">20</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select>
+                </span></span></div>
+                <div class="fpage" id="page-content">
+                </div>
+                <ul class="pagenavi" id="pagingFooter">
+                </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footerbar">
+            <a class="move-top"></a>
+        </footer>
+    </div>
+
+</body>
+
+</html>
